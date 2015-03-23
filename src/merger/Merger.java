@@ -6,17 +6,29 @@
 
 package merger;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  *
  * @author yousufkhan
  */
 public class Merger {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static File file =new File("corpus/data.txt");
+    
+    public static void merger(ArrayList<String> wholeFile){
+        for(int i =0;i<wholeFile.size();i++){
+            String replace=wholeFile.get(i).replaceAll("[A-Za-z0-9:]", "");
+            replace.trim();
+            if(replace.startsWith(" ")){
+                continue;
+            }
+            System.out.println("word number : "+ i);
+            replace = replace+"\n";
+            WriteData.write(replace,file);
+            
+        }
+    }
+
 }
