@@ -11,7 +11,7 @@ package merger;
  * @author yousufkhan
  */
 public class Main {
-    public static String foldername ="politics";
+    public static String foldername ="sports";
 
     /**
      * @param args the command line arguments
